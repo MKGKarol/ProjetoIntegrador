@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"/>
+	<title>Document</title>
+</head>
+<body>
+	<section class="hero is-primary">
+	  	<div class="hero-body">
+			<div class="container">
+				<nav class="nav">
+					<!-- This "nav-menu" is hidden on mobile -->
+					<!-- Add the modifier "is-active" to display it on mobile -->
+					<div class="nav-left nav-menu">
+					<a class="nav-item" href="index.html">
+						Home
+					</a>
+					<a class="nav-item" href="professor.html">
+						Professor
+					</a>
+					<a class="nav-item">
+						Alunos
+					</a>
+					<a class="nav-item">
+						Tutor
+					</a>
+					<a class="nav-item">
+						Disciplina
+					</a>
+					<a class="nav-item is-active">
+						Avaliação
+					</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+		  	<div class="heading">
+				<h1 class="title">Avaliação da aula</h1>	  
+			</div>
+			<div class="field">
+				<label class="label">Disciplina:*</label>
+				<div class="select">
+					<select id="disciplina">
+						<option value="0">Selecione...</option>
+						<option value="1">Desenvolvimento WEB</option>
+						<option value="2">Banco de Dados</option>
+						<option value="3">Sistemas Operacionais</option>
+					</select>
+				</div>
+		  	</div>
+
+			<div class="field">
+				<label class="label">Nota:*</label>
+				<div class="select">
+					<select id="nota">
+						<option value="0">Selecione...</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+		  	</div>
+		  
+			<div class="field">
+				<label class="label">Comentário:</label>
+				<div class="control">
+					<textarea class="textarea" placeholder="Comentário" id="comentario"></textarea>
+				</div>
+			</div>
+			<div class="buttons">
+				<button class="button is-info" id="btn-enviar">Enviar</button>
+			</div>
+		</div>
+	</section>
+	
+	
+	<footer class="footer">
+	  	<div class="container">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Ava 1.0 - Sistemas de aulas inteligentes</strong> by <a href="#">Projeto Integrador</a>. 
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript" src="js/avaliacao.js"></script>
+</body>
+</html>
