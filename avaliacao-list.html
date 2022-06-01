@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"/>
-	<title>Document</title>
+	<title>Avaliações</title>
 </head>
 <body>
 	<section class="hero is-primary">
@@ -15,7 +15,7 @@
 				<!-- This "nav-menu" is hidden on mobile -->
 				<!-- Add the modifier "is-active" to display it on mobile -->
 				<div class="nav-left nav-menu">
-				  <a class="nav-item is-active">
+				  <a class="nav-item" href="index.html">
 					Home
 				  </a>
 				  <a class="nav-item" href="professor.html">
@@ -33,7 +33,7 @@
 				<a class="nav-item" href="avaliacao.html">
 					Avaliação
 				</a>
-				<a class="nav-item" href="avaliacao-list.html">
+				<a class="nav-item is-active">
 					Lista de Avaliações
 				</a>
 				</div>
@@ -45,10 +45,8 @@
 	  <section class="section">
 		<div class="container">
 		  <div class="heading">
-			<h1 class="title">Section</h1>
-			<h2 class="subtitle">
-			  A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-			</h2>
+            <h1 class="title">Avaliações</h1>
+			<div class="row" id="lista-avaliacao"></div>
 		  </div>
 		</div>
 	  </section>
@@ -69,5 +67,7 @@
 		</div>
 	  </div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="js/avaliacao-list.js"></script>
 </body>
 </html>
