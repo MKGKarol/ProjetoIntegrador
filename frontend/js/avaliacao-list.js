@@ -19,6 +19,7 @@ function listar(){
             conteudo += "<th scope=\"col\">Disciplina</th>";
             conteudo += "<th scope=\"col\">Avaliação</th>";
             conteudo += "<th scope=\"col\">Comentário</th>";
+            conteudo += "<th scope=\"col\">Ações</th>";
             conteudo += "</tr>";
             conteudo += "</thead>";
             conteudo += "<tbody>";
@@ -31,6 +32,10 @@ function listar(){
                     conteudo += "<td>" + resultado[i].nomeDisciplina + "</td>";
                     conteudo += "<td>" + resultado[i].nota + "</td>";
                     conteudo += "<td>" + resultado[i].comentario + "</td>";
+                    conteudo += "<td>";
+                    conteudo += "<a class=\"button is-danger\" onclick=\"excluir(" + resultado[i].id + ")\">Excluir</a>";
+                    conteudo += "<a class=\"button is-primary\" href=\"avaliacao-edit.html?id=" + resultado[i].id + "\">Visualizar</a>";
+                    conteudo += "</td>";
                     conteudo += "</tr>";
                 }
             }else{
@@ -44,6 +49,19 @@ function listar(){
 
             tableBody.innerHTML = conteudo;
         }   
+    })
+}
+
+function excluir(id){
+    $.ajax({
+        method: "DELETE",
+        url: "https://localhost:7108/api/AvaliacaoAulas/" + id,
+        dataType: 'json',
+        crossDomain: true,
+        success: function(){
+            alert("Avaliação ecluída com sucesso!");
+            listar();
+        }
     })
 }
 
